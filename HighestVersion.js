@@ -39,6 +39,6 @@ function extractSolidityVersions(filePath) {
 }
 
 // Example usage
-const filePath = 'TokenContract.sol'; // Replace with the path to your Solidity file
+const filePath = 'Contract.sol'; // Replace with the path to your Solidity file
 const highestVersion = extractSolidityVersions(filePath);
 console.log(`The highest Solidity version in the file is: ${highestVersion}`);

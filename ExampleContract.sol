@@ -179,7 +179,7 @@ contract LatestContract {
     }
 }
 
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.7;
 
 contract MoreRecentContract {
     uint public value;
@@ -200,14 +200,14 @@ contract MoreRecentContract {
         value = 0;
     }
 
-    function doubleValue() public {
-        value *= 2;
+    function tripleValue() public {
+        value *= 3;
     }
 }
 
-pragma solidity ^0.8.15;
+pragma solidity ^0.8.11;
 
-contract RecentContract {
+contract EvenMoreRecentContract {
     uint public value;
 
     function setValue(uint _value) public {
@@ -226,8 +226,8 @@ contract RecentContract {
         value = 0;
     }
 
-    function doubleValue() public {
-        value *= 2;
+    function tripleValue() public {
+        value *= 3;
     }
 
     function halveValue() public {
@@ -235,7 +235,79 @@ contract RecentContract {
     }
 }
 
+pragma solidity ^0.8.17;
+
+contract NearLatestContract {
+    uint public value;
+
+    function setValue(uint _value) public {
+        value = _value;
+    }
+
+    function getValue() public view returns (uint) {
+        return value;
+    }
+
+    function incrementValue() public {
+        value += 1;
+    }
+
+    function resetValue() public {
+        value = 0;
+    }
+
+    function tripleValue() public {
+        value *= 3;
+    }
+
+    function halveValue() public {
+        value /= 2;
+    }
+
+    function incrementBy(uint _amount) public {
+        value += _amount;
+    }
+}
+
 pragma solidity ^0.8.20;
+
+contract AlmostLatestContract {
+    uint public value;
+
+    function setValue(uint _value) public {
+        value = _value;
+    }
+
+    function getValue() public view returns (uint) {
+        return value;
+    }
+
+    function incrementValue() public {
+        value += 1;
+    }
+
+    function resetValue() public {
+        value = 0;
+    }
+
+    function tripleValue() public {
+        value *= 3;
+    }
+
+    function halveValue() public {
+        value /= 2;
+    }
+
+    function incrementBy(uint _amount) public {
+        value += _amount;
+    }
+
+    function decrementValue() public {
+        value -= 1;
+    }
+}
+
+pragma solidity ^0.8.25;
 
 contract LatestVersionContract {
     uint public value;
@@ -256,15 +328,23 @@ contract LatestVersionContract {
         value = 0;
     }
 
-    function doubleValue() public {
-        value *= 2;
+    function tripleValue() public {
+        value *= 3;
     }
 
     function halveValue() public {
         value /= 2;
     }
 
-    function tripleValue() public {
-        value *= 3;
+    function incrementBy(uint _amount) public {
+        value += _amount;
+    }
+
+    function decrementValue() public {
+        value -= 1;
+    }
+
+    function squareValue() public {
+        value *= value;
     }
 }
